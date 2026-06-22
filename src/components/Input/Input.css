@@ -1,0 +1,193 @@
+/* ============================================
+   INPUT CONTAINER
+   ============================================ */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.input-full-width {
+  width: 100%;
+}
+
+/* ============================================
+   LABEL
+   ============================================ */
+.input-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.input-required {
+  color: #dc2626;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+/* ============================================
+   INPUT WRAPPER
+   ============================================ */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* ============================================
+   INPUT FIELD
+   ============================================ */
+.input-field {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #111827;
+  background-color: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  outline: none;
+  min-height: 44px;
+}
+
+/* Input states */
+.input-field:hover:not(.input-disabled):not(.input-readonly) {
+  border-color: #9ca3af;
+}
+
+.input-focused {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-error {
+  border-color: #dc2626 !important;
+}
+
+.input-error.input-focused {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.input-disabled {
+  background-color: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.input-readonly {
+  background-color: #f9fafb;
+}
+
+/* Placeholder */
+.input-field::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+/* Password input - padding for toggle button */
+.input-field[type="password"] {
+  padding-right: 44px;
+}
+
+/* ============================================
+   PASSWORD TOGGLE BUTTON
+   ============================================ */
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.password-toggle:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.password-toggle:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.toggle-icon {
+  line-height: 1;
+}
+
+/* ============================================
+   HELPER TEXT & ERRORS
+   ============================================ */
+.input-helper {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.input-error-text {
+  font-size: 0.85rem;
+  color: #dc2626;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.input-error-text::before {
+  content: "⚠️";
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 480px) {
+  .input-field {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    min-height: 38px;
+  }
+
+  .input-label {
+    font-size: 0.85rem;
+  }
+
+  .input-helper,
+  .input-error-text {
+    font-size: 0.8rem;
+  }
+
+  .password-toggle {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .input-field {
+    transition: none;
+  }
+}
+
+/* High contrast mode */
+@media (forced-colors: active) {
+  .input-field {
+    border: 2px solid ButtonText;
+  }
+}

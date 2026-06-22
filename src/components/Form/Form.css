@@ -1,0 +1,348 @@
+/* ============================================
+   FORM CONTAINER
+   ============================================ */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================
+   FORM HEADER
+   ============================================ */
+.form-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.form-header h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.75rem;
+  color: #111827;
+}
+
+.form-subtitle {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   SUCCESS MESSAGE
+   ============================================ */
+.form-success {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.success-icon {
+  font-size: 1.5rem;
+}
+
+.form-success strong {
+  color: #065f46;
+}
+
+.form-success p {
+  margin: 2px 0 0 0;
+  font-size: 0.9rem;
+  color: #047857;
+}
+
+/* ============================================
+   ERROR MESSAGE
+   ============================================ */
+.form-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: slideDown 0.3s ease-out;
+}
+
+.error-icon {
+  font-size: 1.5rem;
+}
+
+.form-error strong {
+  color: #991b1b;
+}
+
+.form-error p {
+  margin: 2px 0 0 0;
+  font-size: 0.9rem;
+  color: #dc2626;
+}
+
+.error-dismiss {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.error-dismiss:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* ============================================
+   PASSWORD STRENGTH INDICATOR
+   ============================================ */
+.password-strength {
+  margin: -8px 0 16px 0;
+}
+
+.strength-bar {
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.strength-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.strength-none {
+  width: 0%;
+  background: #e5e7eb;
+}
+
+.strength-weak {
+  width: 25%;
+  background: #dc2626;
+}
+
+.strength-fair {
+  width: 50%;
+  background: #f59e0b;
+}
+
+.strength-good {
+  width: 75%;
+  background: #2563eb;
+}
+
+.strength-strong {
+  width: 100%;
+  background: #16a34a;
+}
+
+.strength-very-strong {
+  width: 100%;
+  background: #059669;
+}
+
+.strength-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.strength-label strong {
+  font-weight: 600;
+}
+
+/* ============================================
+   CHECKBOX GROUP
+   ============================================ */
+.form-checkbox-group {
+  margin: 8px 0 4px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  padding: 8px 4px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.checkbox-label:hover {
+  background: #f8f9fa;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-custom {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  transition: all 0.2s ease;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+  content: "✓";
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.checkbox-input:focus-visible + .checkbox-custom {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.checkbox-input:disabled + .checkbox-custom {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkbox-text {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.checkbox-link {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.checkbox-link:hover {
+  text-decoration: underline;
+}
+
+.checkbox-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 2px;
+}
+
+/* ============================================
+   FORM ACTIONS
+   ============================================ */
+.form-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ============================================
+   FORM FOOTER
+   ============================================ */
+.form-footer {
+  margin-top: 24px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.form-footer p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.form-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+.form-note {
+  font-size: 0.8rem !important;
+  color: #9ca3af !important;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 640px) {
+  .form-container {
+    padding: 20px 16px;
+    margin: 0 10px;
+  }
+
+  .form-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-success,
+  .form-error {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .checkbox-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .form-success,
+  .form-error {
+    animation: none;
+  }
+  
+  .strength-fill {
+    transition: none;
+  }
+}
