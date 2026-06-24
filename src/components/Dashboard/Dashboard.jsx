@@ -7,7 +7,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 import './Dashboard.css';
 
 // ============================================
-// SUB-COMPONENT: Card
+// SUB-COMPONENT: Metric card
 // ============================================
 
 /**
